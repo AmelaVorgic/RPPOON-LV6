@@ -8,29 +8,25 @@ namespace LV6RPPOON
 {
     class CareTaker
     {
-        private int i;
-        private List<Memento> previousState;
+        List<Memento> State;
+        public Memento previous {get; set;}
 
-        public CareTaker() { this.previousState = new List<Memento>(); i = previousState.Count - 1; }
-        public CareTaker(List<Memento> previousState)
+        public CareTaker() { State = new List<Memento>()}
+        
+        public void AddState(Memento state)
         {
-            this.previousState = previousState;
-            i = previousState.Count - 1;
+            State.Add(state);
         }
-        public Memento Undo()
+        
+        public void Undo(int i)
         {
-            --i;
-            if (i < 0) return null;
-            return previousState[i];
+            State.RemoveAt(i);
         }
-
-        public void AddPreviousState(Memento state) { previousState.Add(state); i = previousState.Count - 1; }
-
-        public Memento Redo()
+       
+        public void Memento getState(int i)
         {
-            ++i;
-            if (i > previousState.Count - 1) return null;
-            return previousState[i];
+            return.State[i];
         }
+       
     }
 }
