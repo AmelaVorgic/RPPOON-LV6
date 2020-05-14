@@ -52,11 +52,11 @@ namespace LV6RPPOON
             /*
             //zadatak 4
             BankCareTaker MybankCareTaker = new BankCareTaker();
-            BankAccount MyAccount = new BankAccount("Amela", "Vijenac Ivana Mestrovica", 1.750);
+            BankAccount MyAccount = new BankAccount("Amela", "Vijenac Ivana Mestrovica", 1750);
             BankMemento memento = new BankMemento(MyAccount);
             MybankCareTaker.PreviousState = memento;
             Console.WriteLine(MybankCareTaker.PreviousState.Balance.ToString());
-            MyAccount.UpdateBalance(1.200);
+            MyAccount.UpdateBalance(1200);
             memento.AddPreviousState(MyAccount);
             MybankCareTaker.PreviousState = memento;
             Console.WriteLine(MybankCareTaker.PreviousState.Balance.ToString());
