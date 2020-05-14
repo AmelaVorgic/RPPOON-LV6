@@ -36,7 +36,7 @@ namespace LV6RPPOON
             ToDoItem toDo = new ToDoItem("Važno", "Ne zaboravi predati zadatke!", new DateTime(2020, 14, 5));
             MycareTaker.AddState(toDo.StoreState());
             Console.WriteLine(toDo.ToString());
-            toDo.ChangeTask = "Napravi izvještaj!";
+            toDo.ChangeTask = ("Napravi izvještaj!");
             MycareTaker.AddState(toDo.StoreState());
             toDo.RestoreState(mycareTaker.getState(1));
             Console.WriteLine(toDo.ToString());
