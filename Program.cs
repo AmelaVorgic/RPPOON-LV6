@@ -33,18 +33,14 @@ namespace LV6RPPOON
             //zadatak 3
         
             CareTaker MycareTaker = new CareTaker();
-            ToDoItem toDo = new ToDoItem("Važno", "Ne zaboravi predati zadatke!", new DateTime(2020, 1, 1));
-            MycareTaker.AddPreviousState(toDo.StoreState());
-            toDo.text = "Još samo jedna vježba!";
-            toDo.title = "Update o labosima";
-            MycareTaker.AddPreviousState(toDo.StoreState());
+            ToDoItem toDo = new ToDoItem("Važno", "Ne zaboravi predati zadatke!", new DateTime(2020, 14, 5));
+            MycareTaker.AddState(toDo.StoreState());
             Console.WriteLine(toDo.ToString());
-            toDo.RestoreState(MycareTaker.Undo());
+            toDo.ChangeTask = "Napravi izvještaj!";
+            MycareTaker.AddState(toDo.StoreState());
+            toDo.RestoreState(mycareTaker.getState(1));
             Console.WriteLine(toDo.ToString());
-            toDo.RestoreState(careTaker.Undo());
-            Console.WriteLine(toDo.ToString());
-            toDo.RestoreState(MycareTaker.Redo());
-            Console.WriteLine(toDo.ToString());
+            
 
             Console.ReadKey();
             */
