@@ -25,5 +25,5 @@ namespace LV6RPPOON
         public string OwnerName { get { return this.ownerName; } }
         public string OwnerAddress { get { return this.ownerAddress; } }
         public double Balance { get { return this.balance; } }
-    }
+    } 
 }
