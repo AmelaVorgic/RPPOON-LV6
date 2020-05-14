@@ -9,5 +9,5 @@ namespace LV6RPPOON
     interface IAbstractCollection
     {
         IAbstractIterator GetIterator();
-    }
+    }
 }
